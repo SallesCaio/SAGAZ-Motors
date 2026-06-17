@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <rect width="200" height="60" fill="#0D0D0D"/>
+  <!-- Raio estilizado -->
+  <polygon points="15,10 35,10 25,25 40,25 20,50 25,30 10,30" fill="#D00000"/>
+  <!-- Texto SAGAZ -->
+  <text x="50" y="38" fill="#D00000" font-family="Montserrat, sans-serif" font-size="24" font-weight="800">SAGAZ</text>
+  <!-- Texto MOTORS -->
+  <text x="125" y="38" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-size="14" font-weight="400">MOTORS</text>
+</svg>

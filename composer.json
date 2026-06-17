@@ -1,0 +1,12 @@
+{
+    "name": "sagaz/motors",
+    "description": "SAGAZ MOTORS - Catálogo de Motos Elétricas",
+    "require": {
+        "php": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sagaz\\": "src/"
+        }
+    }
+}

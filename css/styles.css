@@ -1,0 +1,239 @@
+/* css/styles.css */
+/* Estilos customizados SAGAZ MOTORS */
+
+:root {
+    --sagaz-red: #D00000;
+    --sagaz-dark: #0D0D0D;
+    --sagaz-black: #000000;
+    --sagaz-white: #FFFFFF;
+    --sagaz-gray: #1A1A1A;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--sagaz-dark);
+    color: var(--sagaz-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--sagaz-black) 0%, var(--sagaz-gray) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(208, 0, 0, 0.3) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-image {
+    max-height: 500px;
+    filter: drop-shadow(0 0 30px rgba(208, 0, 0, 0.5));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+/* Model Cards */
+.model-card {
+    background-color: var(--sagaz-gray);
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.model-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(208, 0, 0, 0.3);
+    border-color: var(--sagaz-red);
+}
+
+.card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.model-card:hover .card-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.model-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.specs {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.specs small {
+    font-size: 0.85rem;
+}
+
+/* Category Cards */
+.category-card {
+    background-color: var(--sagaz-gray);
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    background-color: var(--sagaz-red);
+    border-color: var(--sagaz-red);
+    transform: scale(1.05);
+}
+
+.category-card:hover i {
+    color: var(--sagaz-white) !important;
+}
+
+/* Feature Cards */
+.feature-card {
+    background-color: var(--sagaz-gray);
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    border-color: var(--sagaz-red);
+    transform: translateY(-5px);
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(13, 13, 13, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #333;
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    color: var(--sagaz-white) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--sagaz-red) !important;
+}
+
+/* Footer */
+footer {
+    background-color: var(--sagaz-black) !important;
+    border-top: 1px solid #333;
+}
+
+.social-links a {
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--sagaz-red) !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-image {
+        max-height: 300px;
+        margin-top: 2rem;
+    }
+
+    .display-3 {
+        font-size: 2.5rem;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 20px;
+        right: 20px;
+    }
+}
