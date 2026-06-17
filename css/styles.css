@@ -183,6 +183,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-brand img {
     transition: transform 0.3s ease;
+    max-height: 50px;
+    width: auto;
 }
 
 .navbar-brand:hover img {
@@ -198,6 +200,13 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link:hover,
 .nav-link.active {
     color: var(--sagaz-red) !important;
+}
+
+/* Logo responsivo */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        max-height: 40px;
+    }
 }
 
 /* Footer */

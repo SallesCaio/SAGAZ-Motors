@@ -1,7 +1,7 @@
 <?php
  // index.php
 
-    $pageTitle = 'SAGAZ MORORS - Motos Elétricas';
+    $pageTitle = 'SAGAZ MOTORS - Motos Elétricas';
     $activePage = 'home';
     require_once 'includes/db.php';
     require_once 'includes/functions.php';
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="col-lg-6 text-center">
-                <img src="img/hero-moto.png" alt="SAGAZ M400" class="img-fluid hero-image">
+                <img src="img/hero-moto.svg" alt="SAGAZ M400" class="img-fluid hero-image">
             </div>
         </div>
     </div>

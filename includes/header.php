@@ -10,6 +10,10 @@ if (!isset($activePage)) $activePage = '';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $pageTitle ?> — SAGAZ MOTORS</title>
     <meta name="description" content="SAGAZ MOTORS — Motos elétricas com o melhor custo-benefício. Economia, sustentabilidade e performance.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/logo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
         <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
