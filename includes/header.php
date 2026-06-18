@@ -4,7 +4,7 @@ if (!isset($pageTitle)) $pageTitle = 'SAGAZ MOTORS';
 if (!isset($activePage)) $activePage = '';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +12,9 @@ if (!isset($activePage)) $activePage = '';
     <meta name="description" content="SAGAZ MOTORS — Motos elétricas com o melhor custo-benefício. Economia, sustentabilidade e performance.">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="img/logo.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
-        <!-- Google Fonts -->
+    <link rel="icon" type="image/x-icon" href="/img/logo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/logo.png">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -25,14 +25,15 @@ if (!isset($activePage)) $activePage = '';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
      <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="/index.php">
-                    <img src="/img/logo.png" alt="SAGAZ MOTORS" height="50">
+                <a class="navbar-brand d-flex align-items-center" href="/index.php">
+                    <img src="/img/logo.png" alt="SAGAZ MOTORS" height="45" class="me-2">
+                    <span class="fw-bold text-white" style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px;">SAGAZ MOTORS</span>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">

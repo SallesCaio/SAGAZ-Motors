@@ -39,7 +39,7 @@ include '../includes/header.php';
 
 <section id="contato" class="py-5">
     <div class="container">
-        <h1 class="text-white text-center mb-2">Entre em <span class="text-danger">Contato</span></h1>
+        <h1 class="catalog-title text-center mb-2">Entre em <span class="text-danger">Contato</span></h1>
         <p class="text-white-50 text-center mb-5">Fale conosco e encontre a moto elétrica ideal</p>
 
         <?php if ($mensagem): ?>
@@ -53,7 +53,7 @@ include '../includes/header.php';
             <!-- Formulário -->
             <div class="col-lg-6">
                 <div class="card bg-dark border-secondary">
-                    <div class="card-body">
+                    <div class="card-body p-4">
                         <h4 class="text-white mb-4"><i class="fa-solid fa-envelope text-danger"></i> Envie sua Mensagem</h4>
 
                         <form method="POST" action="">
@@ -98,7 +98,7 @@ include '../includes/header.php';
             <!-- Informações de Contato -->
             <div class="col-lg-6">
                 <div class="card bg-dark border-secondary mb-4">
-                    <div class="card-body">
+                    <div class="card-body p-4">
                         <h4 class="text-white mb-4"><i class="fa-solid fa-location-dot text-danger"></i> Onde Estamos</h4>
 
                         <ul class="list-unstyled text-white-50">
@@ -120,7 +120,7 @@ include '../includes/header.php';
                             </li>
                         </ul>
 
-                        <a href="https://wa.me/5521999999999?text=Olá! Gostaria de saber mais sobre as motos elétricas SAGAZ."
+                        <a href="https://wa.me/5521999052694?text=Olá! Gostaria de saber mais sobre as motos elétricas SAGAZ."
                            class="btn btn-success w-100" target="_blank">
                             <i class="fa-brands fa-whatsapp"></i> Falar pelo WhatsApp
                         </a>
@@ -129,7 +129,7 @@ include '../includes/header.php';
 
                 <!-- Garantias -->
                 <div class="card bg-dark border-secondary">
-                    <div class="card-body">
+                    <div class="card-body p-4">
                         <h4 class="text-white mb-4"><i class="fa-solid fa-shield-halved text-danger"></i> Nossas Garantias</h4>
 
                         <div class="d-flex align-items-start mb-3">

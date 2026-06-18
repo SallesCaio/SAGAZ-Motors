@@ -7,6 +7,7 @@
     require_once 'includes/functions.php';
 
     $destaques = getModelos($pdo, null, true);
+    $destaques = array_slice($destaques, 0, 3);
     $categorias = getCategorias($pdo);
 
     include 'includes/header.php';
