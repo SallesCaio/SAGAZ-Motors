@@ -51,7 +51,7 @@
         <h2 class="text-center text-white mb-2">Modelos em <span class="text-danger">Destaque</span></h2>
         <p class="text-center text-white-50 mb-5">Conheça nossos melhores modelos</p>
 
-        <div class="row g-4">
+        <div class="row g-4 models-grid">
             <?php foreach ($destaques as $modelo): ?>
             <div class="col-md-6 col-lg-3">
                 <div class="card model-card h-100">

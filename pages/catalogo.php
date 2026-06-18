@@ -88,7 +88,7 @@ include '../includes/header.php';
         </div>
 
         <!-- Resultados -->
-        <div class="row g-4">
+        <div class="row g-4 models-grid">
             <?php if (empty($modelos)): ?>
             <div class="col-12 text-center py-5">
                 <i class="fa-solid fa-motorcycle fa-3x text-white-50 mb-3"></i>
