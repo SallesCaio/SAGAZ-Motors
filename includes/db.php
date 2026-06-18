@@ -5,7 +5,7 @@
 $host = 'localhost';
 $dbname = 'sagaz_motors';
 $username = 'root';
-$password = 'root123'; // Sem senha (modo standalone)
+$password = ''; // Sem senha (modo standalone)
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
