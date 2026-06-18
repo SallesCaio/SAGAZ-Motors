@@ -22,21 +22,31 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', function() {
             if (window.scrollY > 50) {
                 navbar.style.padding = '10px 0';
-                navbar.style.backgroundColor = 'rgba(13, 13, 13, 0.98)';
+                navbar.style.backgroundColor = 'rgba(8, 8, 8, 0.98)';
             } else {
                 navbar.style.padding = '15px 0';
-                navbar.style.backgroundColor = 'rgba(13, 13, 13, 0.95)';
+                navbar.style.backgroundColor = 'rgba(8, 8, 8, 0.95)';
             }
         });
     }
 
-        // Animação de entrada dos cards
+    // Animação de entrada dos cards com IntersectionObserver
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
 
-        // Aplica animação aos cards
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Aplica animação aos cards
     document.querySelectorAll('.model-card, .category-card, .feature-card').forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
