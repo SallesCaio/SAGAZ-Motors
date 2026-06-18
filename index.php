@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="col-lg-6 text-center">
-                <img src="img/hero-moto.svg" alt="SAGAZ M400" class="img-fluid hero-image">
+                <img src="img/models/mp400.png" alt="SAGAZ M400" class="img-fluid hero-product-image">
             </div>
         </div>
     </div>

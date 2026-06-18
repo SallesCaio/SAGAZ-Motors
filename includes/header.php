@@ -31,8 +31,8 @@ if (!isset($activePage)) $activePage = '';
      <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="index.php">
-                    <img src="img/logo.png" alt="SAGAZ MOTORS" height="50">
+                <a class="navbar-brand" href="/index.php">
+                    <img src="/img/logo.png" alt="SAGAZ MOTORS" height="50">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -42,16 +42,16 @@ if (!isset($activePage)) $activePage = '';
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link <?= $activePage === 'home' ? 'active' : '' ?>" href="index.php">Início</a>
+                            <a class="nav-link <?= $activePage === 'home' ? 'active' : '' ?>" href="/index.php">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= $activePage === 'catalogo' ? 'active' : '' ?>" href="pages/catalogo.php">Catálogo</a>
+                            <a class="nav-link <?= $activePage === 'catalogo' ? 'active' : '' ?>" href="/pages/catalogo.php">Catálogo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= $activePage === 'contato' ? 'active' : '' ?>" href="pages/contato.php">Contato</a>
+                            <a class="nav-link <?= $activePage === 'contato' ? 'active' : '' ?>" href="/pages/contato.php">Contato</a>
                         </li>
                     </ul>
-                    <a href="https://wa.me/5521999999999" class="btn btn-success ms-3" target="_blank">
+                    <a href="https://wa.me/5521999052694" class="btn btn-success ms-3" target="_blank">
                         <i class="fa-brands fa-whatsapp"></i> Fale Conosco
                     </a>
                 </div>

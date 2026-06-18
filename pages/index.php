@@ -6,7 +6,7 @@
     require_once 'includes/db.php';
     require_once 'includes/functions.php';
 
-    %destaques = getModelos($pdo, null, true);
+    $destaques = getModelos($pdo, null, true);
     $categorias = getCategorias($pdo);
 
     include 'includes/header.php';

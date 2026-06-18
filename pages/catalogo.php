@@ -23,7 +23,7 @@ include '../includes/header.php';
 
 <section id="catalogo" class="py-5">
     <div class="container">
-        <h1 class="text-white text-center mb-2">Nosso <span class="text-danger">Catálogo</span></h1>
+        <h1 class="catalog-title text-center mb-2">Nosso <span class="text-danger">Catálogo</span></h1>
         <p class="text-white-50 text-center mb-5">Encontre a moto elétrica ideal para você</p>
 
         <!-- Filtros -->
