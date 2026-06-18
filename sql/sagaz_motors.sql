@@ -1,6 +1,4 @@
--- sql/sagaz_motors.sql
--- Script completo do banco de dados SAGAZ MOTORS
-
+-- Criar banco de dados
 CREATE DATABASE IF NOT EXISTS sagaz_motors CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE sagaz_motors;
 
@@ -41,6 +39,25 @@ CREATE TABLE IF NOT EXISTS modelos (
     FOREIGN KEY (categoria_id) REFERENCES categorias(id)
 );
 
+-- Inserir modelos com imagens
+INSERT INTO modelos (categoria_id, nome, slug, preco, parcela_valor, parcelas, motor, bateria, autonomia, velocidade_max, tempo_carga, destaque, imagem) VALUES
+(1, 'M400', 'm400', 5022.00, 279.00, 18, '400W', '36V 10AH', '40 km', '32 km/h', '6-8h', 1, 'img/models/m400.png'),
+(1, 'P400', 'p400', 2322.00, 129.00, 18, '400W', '36V 10AH', '30 km', '25 km/h', '4-6h', 1, 'img/models/p400.png'),
+(1, 'OEK Tech', 'oek-tech', 7182.00, 399.00, 18, '500W', '48V 20AH', '45 km', '32 km/h', '5-6h', 0, 'img/models/oek-tech.png'),
+(1, 'TANK', 'tank', 13662.00, 759.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 1, 'img/models/tank.png'),
+(1, 'AG 8', 'ag-8', 10422.00, 579.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 0, 'img/models/ag8.png'),
+(1, 'AG 10', 'ag-10', 13662.00, 759.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 0, 'img/models/ag10.png'),
+(1, 'AG 12', 'ag-12', 12942.00, 719.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 1, 'img/models/ag12.png'),
+(1, 'AG 15', 'ag-15', 13662.00, 759.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 0, 'img/models/ag15.png'),
+(1, 'N70', 'n70', 10782.00, 599.00, 18, '1000W', '72V 23AH', '60 km', '32 km/h', '6-8h', 0, 'img/models/n70.png'),
+(1, 'Paris Retro', 'paris-retro', 10782.00, 599.00, 18, '1000W', '72V 23AH', '60 km', '32 km/h', '6-8h', 0, 'img/models/paris-retro.png'),
+(1, 'Dolphin GS', 'dolphin-gs', 10782.00, 599.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '6-8h', 0, 'img/models/dolphin-gs.png'),
+(1, 'Harley X13', 'harley-x13', 10062.00, 559.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 0, 'img/models/x13.png'),
+(1, 'V8', 'v8', 8442.00, 469.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 0, 'img/models/v8.png'),
+(2, 'Cargueira', 'cargueira', 9900.00, 550.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 1, 'img/models/cargueira.png'),
+(4, 'Triciclo', 'triciclo', 12222.00, 679.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 0, 'img/models/triciclo.png'),
+(3, 'Bike Yoyo', 'bike-yoyo', 4302.00, 239.00, 18, '350W', '48V 12AH', '30 km', '32 km/h', '4-8h', 0, 'img/models/bike-yoyo.png');
+
 -- Tabela de leads
 CREATE TABLE IF NOT EXISTS leads (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -54,21 +71,7 @@ CREATE TABLE IF NOT EXISTS leads (
     FOREIGN KEY (modelo_id) REFERENCES modelos(id)
 );
 
--- Inserir modelos
-INSERT INTO modelos (categoria_id, nome, slug, preco, parcela_valor, parcelas, motor, bateria, autonomia, velocidade_max, tempo_carga, destaque) VALUES
-(1, 'M400', 'm400', 5022.00, 279.00, 18, '400W', '36V 10AH', '40 km', '32 km/h', '6-8h', 1),
-(2, 'Cargueira', 'cargueira', 9900.00, 550.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 1),
-(1, 'OEK Tech', 'oek-tech', 7182.00, 399.00, 18, '500W', '48V 20AH', '45 km', '32 km/h', '5-6h', 0),
-(1, 'TANK', 'tank', 13662.00, 759.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 1),
-(1, 'AG 8', 'ag-8', 10422.00, 579.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 0),
-(1, 'AG 10', 'ag-10', 13662.00, 759.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 0),
-(1, 'AG 12', 'ag-12', 12942.00, 719.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 1),
-(1, 'AG 15', 'ag-15', 13662.00, 759.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 0),
-(1, 'N70', 'n70', 10782.00, 599.00, 18, '1000W', '72V 23AH', '60 km', '32 km/h', '6-8h', 0),
-(1, 'Paris Retro', 'paris-retro', 10782.00, 599.00, 18, '1000W', '72V 23AH', '60 km', '32 km/h', '6-8h', 0),
-(1, 'Dolphin GS', 'dolphin-gs', 10782.00, 599.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '6-8h', 0),
-(1, 'Harley X13', 'harley-x13', 10062.00, 559.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 0),
-(1, 'V8', 'v8', 8442.00, 469.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 0),
-(4, 'Triciclo', 'triciclo', 12222.00, 679.00, 18, '1000W', '60V 20AH', '50 km', '32 km/h', '5-6h', 0),
-(1, 'P400', 'p400', 2322.00, 129.00, 18, '400W', '36V 10AH', '30 km', '25 km/h', '4-6h', 1),
-(3, 'Bike Yoyo', 'bike-yoyo', 4302.00, 239.00, 18, '350W', '48V 12AH', '30 km', '32 km/h', '4-8h', 0);
+-- Verificar
+SELECT 'Banco criado com sucesso!' as Status;
+SELECT COUNT(*) as TotalModelos FROM modelos;
+SELECT COUNT(*) as TotalCategorias FROM categorias;
